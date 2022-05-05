@@ -47,6 +47,13 @@ section{
     border-radius: 10px;
     box-shadow: 0 5px 10px -5px rgb(0 0 0 / 30%);
     text-align: center;
+    display: grid;
+    align-content: stretch;
+    justify-items: center;
+}
+.form img {
+    height: 150px;
+    width: 150px;
 }
 .form_title{
     font-size: 1.8rem;
@@ -76,13 +83,18 @@ section{
     justify-content: center;
     margin-top: 15px;
 }
+.form_container_triangulo input{
+    font-size: 1.1rem;
+    border: 1px solid rgb(125, 119, 119);
+    border-radius: 5px;
+    text-align: right;
+}
 .form_button{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 20px;
 }
-
 
 .form_button button{
 	box-shadow:inset 0px 1px 0px 0px #7391bf;
@@ -108,8 +120,32 @@ section{
 	top:1px;
 }
 .details{
+    height: 30px;
     margin-top: 20px;
     text-align: center;
     font-size: 16px;
     font-weight: 600;
+}
+
+@media (max-width: 500px){
+    body{
+        background-color: #000000;
+        opacity: 1;
+        background-image:  radial-gradient(#a5a1a1 0.45px, transparent 0.45px), radial-gradient(#a5a1a1 0.45px, #000000 0.45px);
+        background-size: 18px 18px;
+        background-position: 0 0,9px 9px;
+    }
+   header{
+    background-color:rgba(62, 62, 62, 0.715);
+    position: absolute;
+
+   }
+   section{
+    flex-direction: column;
+    margin: auto;
+    margin-top: 100px;
+   }
+    .form {
+        margin: 10px;
+    }
 }

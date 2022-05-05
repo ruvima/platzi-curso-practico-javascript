@@ -96,15 +96,28 @@ function calcularPerimetroCuadrado(){
     const value = input.value;
 
     const perimetro = perimetroCuadrado(value);
-    resultadoCuadrado.innerHTML = "El perimetro del cuadrado es: " + "<br/>" + perimetro;
+    
+    if (perimetro == 0){
+        resultadoCuadrado.innerHTML = "Número inválido ❌";
+        }
+    else if (perimetro > 0){
+        resultadoCuadrado.innerHTML = "El perimetro del cuadrado es: " + "<br/>" + perimetro;
+        }
 }
+
 
 function calcularAreaCuadrado(){
     const input = document.getElementById("inputCuadrado");
     const value = input.value;
 
     const area = areaCuadrado(value);
-    resultadoCuadrado.innerHTML = "El área del cuadrado es: " + "<br/>" + area;
+
+    if (area == 0){
+        resultadoCuadrado.innerHTML = "Número inválido ❌";
+        }
+    else if (area > 0){
+        resultadoCuadrado.innerHTML = "El área del cuadrado es: " + "<br/>" + area;
+    }
 }
 
 //Triángulo
@@ -118,7 +131,13 @@ function calcularPerimetroTriangulo(){
     const valueBase = parseInt(inputBase.value);
 
     const perimetro = perimetroTriangulo(valueA, valueB, valueBase);
-    resultadoTriangulo.innerHTML = "El perimetro del triangulo es: " + "<br/>" + perimetro;
+
+    if (Number.isNaN(perimetro) == true){
+        resultadoTriangulo.innerHTML = "Número inválido ❌";
+        }
+    else if (Number.isNaN(perimetro) == false){
+        resultadoTriangulo.innerHTML = "El perimetro del triángulo es: " + "<br/>" + perimetro;
+    }
 }
 
 function calcularAreaTriangulo(){
@@ -128,7 +147,13 @@ function calcularAreaTriangulo(){
     const valueAltura = parseInt(inputA.value);
 
     const area = areaTriangulo(valueAltura, valueBase);
-    resultadoTriangulo.innerHTML = "El área del triangulo es: " + "<br/>" + area;
+
+    if (Number.isNaN(area) == true){
+        resultadoTriangulo.innerHTML = "Número inválido ❌";
+        }
+    else if (Number.isNaN(area) == false){
+        resultadoTriangulo.innerHTML = "El área del triángulo es: " + "<br/>" + area;
+    }
 }
 
 //Círculo
@@ -138,7 +163,13 @@ function calcularPerimetroCirculo(){
     const value = input.value;
 
     const perimetro = perimetroCirculo(value);
-    resultadoCirculo.innerHTML = "El perimetro del circulo es: " + "<br/>" + perimetro;
+
+    if (perimetro == 0){
+        resultadoCirculo.innerHTML = "Número inválido ❌";
+        }
+    else if (perimetro > 0){
+        resultadoCirculo.innerHTML = "El perimetro del círculo es: " + "<br/>" + perimetro.toFixed(2);
+    }
 }
 
 function calcularAreaCirculo(){
@@ -146,5 +177,11 @@ function calcularAreaCirculo(){
     const value = input.value;
 
     const area = areaCirculo(value);
-    resultadoCirculo.innerHTML = "El área del circulo es: " + "<br/>" + area;
+
+    if (area == 0){
+        resultadoCirculo.innerHTML = "Número inválido ❌";
+        }
+    else if (area > 0){
+        resultadoCirculo.innerHTML = "El área del círculo es: " + "<br/>" + area.toFixed(2);
+    }
 }
