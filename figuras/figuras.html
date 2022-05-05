@@ -23,39 +23,48 @@
             </label>
 
             <div class="form_container">
-            <input id="inputCuadrado" type="number"/>
+                <input id="inputCuadrado" type="number"/>
+                <div class="form_button">
+                    <button type="button" onclick="calcularPerimetroCuadrado()">
+                        Perímetro
+                    </button>
+                    <button type="button" onclick="calcularAreaCuadrado()">
+                        Área
+                    </button>
+                </div>
+            </div>
 
-            <div class="form_button">
-            <button type="button" onclick="calcularPerimetroCuadrado()">
-                Perímetro
-            </button>
-            <button type="button" onclick="calcularAreaCuadrado()">
-                Área
-            </button>
+            <div class="details">
+                <p id="result_Cuadrado">Resultado: </p>
             </div>
-            </div>
+
         </form>
         
         <form class="form">
-            <h2 class="form_title">Triangulo</h2>
-            <label class="form_label for="inputTriangulo">
+             <h2 class="form_title">Triangulo</h2>
+             <label class="form_label for="inputTriangulo">
                 ¿Cuales son las medidas de tu triangulo?
             </label>
 
             <div class="form_container_triangulo">
-            <input id="inputTrianguloA" type="number" placeholder="Lado A"/>
-            <input id="inputTrianguloB" type="number" placeholder="Lado B"/>
-            <input id="inputTrianguloBase" type="number" placeholder="Base"/>
-            <input id="inputTrianguloAltura" type="number" placeholder="Altura"/>
+                <input id="inputTrianguloA" type="number" placeholder="Lado A"/>
+                <input id="inputTrianguloB" type="number" placeholder="Lado B"/>
+                <input id="inputTrianguloBase" type="number" placeholder="Base"/>
+                <input id="inputTrianguloAltura" type="number" placeholder="Altura"/>
             </div>
             <div class="form_button">
-            <button type="button" onclick="calcularPerimetroTriangulo()">
-                Perímetro
-            </button>
-            <button type="button" onclick="calcularAreaTriangulo()">
-                Área
-            </button>
+                 <button type="button" onclick="calcularPerimetroTriangulo()">
+                    Perímetro
+                </button>
+                 <button type="button" onclick="calcularAreaTriangulo()">
+                    Área
+                 </button>
             </div>
+
+            <div class="details">
+                <p id="result_Triangulo">Resultado: </p>
+            </div>
+
         </form>
         
         <form class="form">
@@ -63,17 +72,21 @@
             <label class="form_label for="inputRadio">
                 ¿Cuánto mide el radio de tu círculo?
             </label>
-
+            
             <div class="form_container">
-            <input id="inputRadio" type="number"/>
-            <div class="form_button">
-            <button type="button" onclick="calcularPerimetroCirculo()">
-                Perímetro
-            </button>
-            <button type="button" onclick="calcularAreaCirculo()">
-                Área
-            </button>
+                <input id="inputRadio" type="number"/>
+              <div class="form_button">
+                <button type="button" onclick="calcularPerimetroCirculo()">
+                    Perímetro
+                </button>
+                <button type="button" onclick="calcularAreaCirculo()">
+                    Área
+                </button>
+              </div>
             </div>
+
+            <div class="details">
+                <p id="result_Circulo">Resultado: </p>
             </div>
         </form>
    </section>
