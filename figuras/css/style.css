@@ -83,11 +83,16 @@ section{
     justify-content: center;
     margin-top: 15px;
 }
+
 .form_container_triangulo input{
     font-size: 1.1rem;
     border: 1px solid rgb(125, 119, 119);
     border-radius: 5px;
     text-align: right;
+}
+.form_container_triangulo input#inputBase.buttonT{
+    width: 170px;
+    text-align: center;
 }
 .form_button{
     display: flex;
@@ -127,7 +132,7 @@ section{
     font-weight: 600;
 }
 
-@media (max-width: 500px){
+@media (max-width: 629px){
     body{
         background-color: #000000;
         opacity: 1;
@@ -148,4 +153,20 @@ section{
     .form {
         margin: 10px;
     }
+}
+
+@media (min-width: 630px ) and (max-width: 1040px){
+section{
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+}
+.form{
+    width: 40%;
+    margin: 10px;
+}
 }

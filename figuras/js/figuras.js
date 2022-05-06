@@ -185,3 +185,30 @@ function calcularAreaCirculo(){
         resultadoCirculo.innerHTML = "El área del círculo es: " + "<br/>" + area.toFixed(2);
     }
 }
+
+// Triángulo isósceles 
+function alturaTriangulo(ladoA, ladoB, base){
+    return Math.sqrt(ladoA * ladoB - (base * base / 4))
+}
+let resultadoTriangulo2 = document.getElementById("result_Triangulo2");
+function calcularAlturaTriangulo(){    
+    const inputLadoA = document.getElementById("inputLadoA");
+    const inputLadoB = document.getElementById("inputLadoB");
+    const inputBase = document.getElementById("inputBase");
+    const valueLadoA = inputLadoA.value;
+    const valueLadoB = inputLadoB.value;
+    const valueBase = inputBase.value;
+
+    const altura = alturaTriangulo(valueLadoA, valueLadoB, valueBase);
+
+    if(valueLadoA !== valueLadoB){
+        resultadoTriangulo2.innerHTML = "Los lados no son iguales ❌";
+    }
+    else if(valueLadoA == valueLadoB && valueBase <= 0){
+        resultadoTriangulo2.innerHTML = "Número inválido ❌";
+    }
+    else if (valueLadoA == valueLadoB){
+        resultadoTriangulo2.innerHTML = "La altura del triángulo es: " + "<br/>" + altura.toFixed(2);
+    }
+}
+

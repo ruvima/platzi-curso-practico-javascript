@@ -44,7 +44,7 @@
         <form class="form">
              <h2 class="form_title">Triángulo</h2>
              <img src="https://i.ibb.co/kQPsJdm/triangulo.png" alt="Triangulo"/>
-             <label class="form_label for="inputTriangulo">
+             <label class="form_label">
                 ¿Cuales son las medidas de tu triángulo?
             </label>
 
@@ -72,7 +72,7 @@
         <form class="form">
             <h2 class="form_title">Círculo</h2>
             <img src="https://i.ibb.co/sCnHbzZ/circulo.png" alt="circulo"/>
-            <label class="form_label for="inputRadio">
+            <label class="form_label" for="inputRadio">
                 ¿Cuánto mide el radio de tu círculo?
             </label>
             
@@ -92,6 +92,30 @@
                 <p id="result_Circulo"></p>
             </div>
         </form>
+
+        <form class="form">
+            <h2 class="form_title">Triángulo isósceles</h2>
+            <img src="https://i.ibb.co/kQPsJdm/triangulo.png" alt="Triángulo isósceles"/>
+            <label class="form_label">
+               ¿Cuales son las medidas de tu triángulo?
+           </label>
+
+           <div class="form_container_triangulo">
+               <input id="inputLadoA" type="number" placeholder="Lado A"/>
+               <input id="inputLadoB" type="number" placeholder="Lado B"/>
+               <input class="buttonT" id="inputBase" type="number" placeholder="Base"/>               
+           </div>
+           <div class="form_button">
+                <button type="button" onclick="calcularAlturaTriangulo()">
+                    Altura
+               </button>
+           </div>
+
+           <div class="details">
+               <p id="result_Triangulo2"></p>
+           </div>
+
+       </form>
    </section>
    <script src="js/figuras.js"></script>
 </body>
